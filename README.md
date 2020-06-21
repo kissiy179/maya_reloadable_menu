@@ -1,0 +1,2 @@
+# maya_reloadable_menu
+リロード機能付きメニューを作るためのパッケージ
