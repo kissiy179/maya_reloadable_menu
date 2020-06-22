@@ -51,7 +51,7 @@ def create_menuroot(menu_name, label=None, parent='MayaWindow', tear_off=True):
 
     cmds.menu(menu_name, label=label, parent=parent, tearOff=tear_off)
 
-def add_reload_menuitem(module_name, func_name, label='reload'):
+def add_reload_menuitem(module_name, func_name, label='Reload'):
     '''
     リロード用メニューアイテムを追加
     '''
