@@ -1,16 +1,24 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from glob import glob
+from os.path import basename
+from os.path import splitext
+from os.path import exists
 from setuptools import setup
+from setuptools import find_packages
+
+def _requires_from_file(filename):
+    if not exists(filename):
+        return []
+    
+    return open(filename).read().splitlines()
 
 setup(
-    name='maya_reloadable_menu',
+    name='reloadable_menu',
     version='0.1.0',
-    author='kissiy179@gmail.com',
-    url='https://github.com/kissiy179/maya_reloadable_menu',
     package_dir={"": "python"},
-    py_modules=['reloadable_menu'],
+    packages=find_packages("python"),
+    py_modules=[splitext(basename(path))[0] for path in glob('python/*.py')],
     include_package_data=True,
+    zip_safe=False,
     python_requires=">=2.7",
-    install_requires=[
-    ]
+    install_requires=_requires_from_file('requirements.txt'),
 )
