@@ -12,7 +12,7 @@ def _requires_from_file(filename):
     return open(filename).read().splitlines()
 
 setup(
-    name='reloadable_menu',
+    name='maya_reloadable_menu',
     version='0.1.0',
     package_dir={"": "python"},
     packages=find_packages("python"),
