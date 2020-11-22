@@ -3,6 +3,9 @@
 REM 遅延環境変数有効
 setlocal EnableDelayedExpansion
 
+@REM .pycファイルを生成しない
+Set PYTHONDONTWRITEBYTECODE=1
+
 REM MAYA_MODULE_PATHにカレントディレクトリを追加
 cd /d %~dp0
 Set MAYA_MODULE_PATH=%cd%;%MAYA_MODULE_PATH%
