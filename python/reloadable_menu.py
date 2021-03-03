@@ -48,8 +48,10 @@ def create_menuroot(menu_name, label=None, parent='MayaWindow', tear_off=True):
     '''
     メニュールートを作成
     すでにある場合は一度削除してから作成
+    menu_nameにスペースを含む場合消すことができなくなるので「_」に置き換える
     '''
     label = label if label else menu_name
+    menu_name = menu_name.replace(' ', '_')
 
     try:
         cmds.deleteUI(menu_name)
