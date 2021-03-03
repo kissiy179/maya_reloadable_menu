@@ -16,6 +16,6 @@ def show_message(message):
 def create_menu_():
     # cmds.setParent('MayaWindow')
     # cmds.menu(label='Test Commands', tearOff=True)
-    cmds.menuItem(l='Test Command 1', command='import test_commands_menu; test_commands_menu.show_message("Test Command 1")')
-    cmds.menuItem(l='Test Command 2', command='import test_commands_menu; test_commands_menu.show_message("Test Command 2")')
+    cmds.menuItem(label='Test Command 1', command='import test_commands_menu; test_commands_menu.show_message("Test Command 1")')
+    cmds.menuItem(label='Test Command 2', command='import test_commands_menu; test_commands_menu.show_message("Test Command 2")')
 
